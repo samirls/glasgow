@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+    font-size: 40px;
+    font-weight:bolder;
+    padding-bottom: 20px;
+    text-align: center;   
+}
+body {
+    background: linear-gradient(45deg, #4e65ff, #92effd);
+    min-height: 100vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    all: unset;
+}
+a:hover{
+    color: #92effd;
+    cursor: pointer;
+}
+#p1, #p2, #p3{
+    font-size: 1.3rem;
+}
+
+
+button {
+    min-width: 90px;
+    min-height: 40px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 10px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 20px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    text-align: center;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #92effd;
+    transform: scale(1.1);
+    transition: 100ms;
+    
+}
+button:active {
+  background-color: #4e65ff;
+}
+#passos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#modal{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border: solid 3px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg, #4e65ff, #92effd);;
+    justify-content: center;
+    min-height: 35rem;
+    width: 55rem;
+    position:absolute;
+    font-size: 1.3rem;
+}
+img{
+    cursor: pointer;
+}
+#close-page{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    cursor: pointer;
+
+}
+.fullscreen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+  }
+#emojiOlho, #emojiBoca, #emojiMaos, #emojiOlho{
+    font-size: 4rem;
+}
+
+#pag2, #pag3, #pag4, #pag5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pergunta{
+    font-size: 2.5rem;
+    padding: 30px;
+}
+#buttons1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#escoreFinal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 2.5rem;
+}
+
+#interp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 550px) {
+
+  #modal {
+        display: block;
+        height: 90%;
+        width: 60%;
+        overflow: scroll;
+    }
+
+}
+  

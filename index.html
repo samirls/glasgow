@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <title>Escala de Glasgow interativa</title>
+</head>
+<body>
+    <div id="pag1">
+        <header id="header">
+            Escala de Glasgow Prática
+        </header>
+        <main id="main">
+            <p id="p1">Através dessa escala é possível mensurar o nível de consciência dos pacientes e encaminhá-los de forma mais segura.</p>
+            <p id="p2">Esse site possui informações retiradas do site do ministério da saúde e foi criado sob supervisão da Dª. Rafaella Laguardia.</p>
+            <button id="iniciar">Iniciar</button>
+            
+                <div id="passos">
+                    <div id="p3">
+                        5 Passos para utilizar a Escala de Coma de Glasgow corretamente:
+                    </div>
+                    <div>
+                        <img id="expandArrow1" src="./img/arrow-expand.png">
+                    </div>
+                </div>
+                <div class="fullscreen-container" style="display: none;">
+                    <div id="modal">
+                        
+                        <div id="close-page"><strong>X</strong></div>
+                        <p><strong>1- Verifique:</strong> Identifique fatores que podem interferir na capacidade de resposta do paciente. É importante considerar na sua avaliação se ele possui alguma limitação anterior ou devido ao ocorrido que o impede de reagir adequadamente naquele tópico (Ex: paciente surdo não poderá reagir normalmente ao estímulo verbal).</p>
+                        <p><strong>2- Observe:</strong> Observe o paciente e fique atento a qualquer comportamento espontâneo dentro dos três componentes da escala.</p>
+                        <p><strong>3- Estimule:</strong> Caso o paciente não aja espontaneamente nos tópicos da escala, é preciso estimular uma resposta. Aborde o paciente na ordem abaixo:</p>
+                        <p><strong>Estímulo sonoro:</strong> Peça (em tom de voz normal ou em voz alta) para que o paciente realize a ação desejada.</p>
+                        <p><strong>Estímulo físico:</strong> Aplique pressão na extremidade dos dedos, trapézio ou incisura supraorbitária.</p>
+                        <p><strong>4- Pontue e some:</strong> Os estímulos que obtiveram a melhor resposta do paciente devem ser marcados em cada um dos três tópicos da escala. Se algum fator impede o paciente de realizar a tarefa, é marcado NT (Não testável).  As respostas correspondem a uma pontuação que irá indicar, de forma simples e prática, a situação do paciente (Ex: O4, V2, M1 e P0 significando respectivamente a nota para ocular, verbal, motora e pupilar, com resultado geral igual a 7).</p>
+                        <p><strong>5- Analise a reatividade pupilar (atualização 2018):</strong> suspenda cuidadosamente as pálpebras do paciente e direcione um foco de luz para os seus olhos. Registre a nota correspondente à reação ao estímulo. Esse valor será subtraído da nota obtida anteriormente, gerando um resultando final mais preciso.</p>
+                        <a href="img/glasgow.svg">Escore</a>
+                        <br>
+                    </div>
+                    
+                </div>
+            
+        </main>
+    </div>
+    <div id="pag2" style="display: none;">
+        <div id="pergunta">
+            Abertura Ocular:
+        </div>
+        <div id="emojiOlho">
+            👀
+        </div>
+        <div id="buttons1">
+            <button id="button1">Espontânea</button>
+            <button id="button2">À voz</button>
+            <button id="button3">À dor</button>
+            <button id="button4">Nenhuma</button>
+        </div>
+    </div>
+    <div id="pag3" style="display: none;">
+        <div id="pergunta">
+            Resposta Verbal:
+        </div>
+        <div id="emojiBoca">
+            👄
+        </div>
+        <div id="buttons1">
+            <button id="button5">Orientada</button>
+            <button id="button6">Confusa</button>
+            <button id="button7">Palavras inapropriadas</button>
+            <button id="button8">Palavras incompreensíveis</button>
+            <button id="button9">Nenhuma</button>
+        </div>
+    </div>
+    <div id="pag4" style="display: none;">
+        <div id="pergunta">
+            Resposta Motora:
+        </div>
+        <div id="emojiMaos">
+            👐
+        </div>
+        <div id="buttons1">
+            <button id="button10">Obedece a Comandos</button>
+            <button id="button11">Localiza a Dor</button>
+            <button id="button12">Movimentos de Retirada</button>
+            <button id="button13">Flexão Normal</button>
+            <button id="button14">Extensão Anormal</button>
+            <button id="button15">Nenhuma</button>
+        </div>
+    </div>
+    <div id="pag5" style="display: none;">
+        <div id="pergunta">
+            Resposta Pupilar:
+        </div>
+        <div id="emojiOlho">
+            👁️
+        </div>
+        <div id="buttons1">
+            <button id="button16">Reação Bilateral ao Estímulo</button>
+            <button id="button17">Apenas Uma Reage ao Estímulo Luminoso</button>
+            <button id="button18">Nenhuma</button>
+        </div>
+    </div>
+    <div id="pag6" style="display: none;">
+        <div id="escoreFinal">
+            Escore <span id="escoreSpan"></span>
+        </div>
+        <div id="interp">Interpretação: <span></span></div>
+        
+
+
+    </div>
+<script src="script.js" async></script>
+</body>
+</html>

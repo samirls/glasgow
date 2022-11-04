@@ -179,7 +179,26 @@ function pag6() {
 //insert inner text to results
 function finalResults() {
     document.getElementById("escoreSpan").innerText = escore;
-
-
+    if (escore <= 3) {
+        document.getElementById("interp").innerText = "Coma profundo sem qualquer resposta com lesão cerebral grave.";
+    }
+    if (escore <= 8 && escore >= 4) {
+        document.getElementById("interp").innerText = "Coma moderado. Possível lesão cerebral grave. Considerado um caso crítico de alteração do nível de consciência. Recomendado protejer as vias aéreas com intubação orotraqueal.";
+    }
+    if (escore <= 12 && escore >= 9) {
+        document.getElementById("interp").innerText = "Coma moderado. Lesão cerebral moderada. Recomendado acompanhar a evolução do paciente.";
+    }
+    if (escore >= 13) {
+        document.getElementById("interp").innerText = "Lesão cerebral leve ou normalidade.";
+    }
 }
+
+//voltar button
+document.getElementById("voltar").addEventListener("click", () => {
+    escoreReset();
+    document.getElementById("pag6").style.display = "none";
+    document.getElementById("pag1").style.display = "";
+
+});
+
 

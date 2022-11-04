@@ -127,25 +127,45 @@ img{
     padding-top: 30px;
     font-size: 2.5rem;
 }
-
+#interp1{
+    padding-top: 40px;
+    font-size: 2rem;
+    text-align: center;
+}
 #interp{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
     font-size: 2rem;
+    padding: 20px;
+    text-align: center;
+}
+#voltar{
+    display: block;
+    margin: 0 auto;
 }
 
 
 @media only screen and (max-width: 550px) {
 
-  #modal {
+    #modal {
         display: block;
+        text-align:center;
         height: 90%;
         width: 60%;
         overflow: scroll;
     }
+    #modal button{
+        display: block;
+        margin: 0 auto;
+    }
+
+    #voltar{
+        display: block;
+        margin: 0 auto;
+    }
+
 
 }
   

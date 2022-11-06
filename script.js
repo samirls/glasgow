@@ -1,4 +1,4 @@
-//Open and close modal
+//Open and close modal 1
 const modal = document.querySelector(".fullscreen-container");
 const openModal = document.querySelector('#expandArrow1');
 const closeModal = document.querySelector('#close-page');
@@ -14,6 +14,25 @@ closeModal.addEventListener('click', ()=>{
 document.addEventListener("click", (e) => {
         if (e.target == modal) {
           modal.setAttribute("style", "display:none");
+        }
+      });
+
+//Open and close modal 2
+const modal2 = document.querySelector(".fullscreen-container2");
+const openModal2 = document.querySelector('#ultResults');
+const closeModal2 = document.querySelector('#close-page2');
+
+openModal2.addEventListener('click', ()=>{
+    modal2.setAttribute('style',"display:flex")  
+    });
+
+closeModal2.addEventListener('click', ()=>{
+        modal2.setAttribute('style',"display: none")
+    });
+
+document.addEventListener("click", (e) => {
+        if (e.target == modal2) {
+          modal2.setAttribute("style", "display:none");
         }
       });
 
@@ -176,9 +195,27 @@ function pag6() {
     document.getElementById("pag6").style.display = "";
 };
 
+//voltar button
+document.getElementById("voltar").addEventListener("click", () => {
+    escoreReset();
+    document.getElementById("pag6").style.display = "none";
+    document.getElementById("pag1").style.display = "";
+
+});
+
 //insert inner text to results
 function finalResults() {
     document.getElementById("escoreSpan").innerText = escore;
+    document.getElementById("liResult").innerText = escore;
+
+    //Local Storage, need to do those things in order: retrive local storage,
+    //push to the array and setItem to localStorage; If you don't retrive first
+    //you store only the last value
+    retrieveLocalStorage() 
+    saveMyEscoresListToLocalStorage();
+
+
+    //conditions to user get escore
     if (escore <= 3) {
         document.getElementById("interp").innerText = "Coma profundo sem qualquer resposta com lesão cerebral grave.";
     }
@@ -191,14 +228,29 @@ function finalResults() {
     if (escore >= 13) {
         document.getElementById("interp").innerText = "Lesão cerebral leve ou normalidade.";
     }
+
+    //refresh ultimo escore consultado
+    
+
 }
 
-//voltar button
-document.getElementById("voltar").addEventListener("click", () => {
-    escoreReset();
-    document.getElementById("pag6").style.display = "none";
-    document.getElementById("pag1").style.display = "";
+//functions to localStorage
+myEscoresList = [];
 
-});
+function saveMyEscoresListToLocalStorage() {
+    myEscoresList.push(escore);
+    window.localStorage.setItem("lastEscores", JSON.stringify(myEscoresList));
+};
 
+function retrieveLocalStorage() {
+    myEscoresList = JSON.parse(localStorage.getItem("lastEscores")) || [];
 
+}
+
+window.onload = function() {
+    retrieveLocalStorage()
+
+    const myEscoresList2 = myEscoresList[myEscoresList.length - 1];
+    document.getElementById("liResult").innerText = myEscoresList2;
+
+  };

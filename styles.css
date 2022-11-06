@@ -60,7 +60,7 @@ button:active {
     align-items: center;
     gap: 10px;
 }
-#modal{
+#modal, #modal2{
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 15px;
@@ -78,14 +78,14 @@ button:active {
 img{
     cursor: pointer;
 }
-#close-page{
+#close-page, #close-page2{
     display: flex;
     justify-content: flex-end;
     width: 100%;
     cursor: pointer;
 
 }
-.fullscreen-container {
+.fullscreen-container, .fullscreen-container2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,7 +145,6 @@ img{
     display: block;
     margin: 0 auto;
 }
-
 
 @media only screen and (max-width: 550px) {
 
